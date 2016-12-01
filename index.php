@@ -6,7 +6,7 @@
   </head>
   <body>
     <header>
-      <div>YAuth</div>
+      <div class="website_title">YAuth</div>
       <nav>
         <ul>
           <li>Home</li>
