@@ -2,41 +2,6 @@ body {
     background-color: gray;
 }
 
-header {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 4.5px;
-  padding: 5px;
-  max-height: 46.4px;
-}
-
-nav {
-  display: inline-block;
-}
-
-.website_title {
-  font-size: 40px;
-  display: inline-block;
-  float: left;
-  padding-right: 16px;
-  border-right: 1px solid gray;
-}
-
-.website_navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.website_navbar>li {
-  float: left;
-}
-
-.website_navbar>li>a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.navbar {
+  border-radius: 0 !important;
 }
