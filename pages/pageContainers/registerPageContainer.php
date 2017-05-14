@@ -1,59 +1,52 @@
           <!-- Main content -->
           <section class="content">
-            <div class="callout callout-info">
-              <h4>Tip!</h4>
-
-              <p>Add the layout-top-nav class to the body tag to get this layout. This feature can also be used with a
-              sidebar! So use this class if you want to remove the custom dropdown menus from the navbar and use regular
-              links instead.</p>
-            </div>
-            <div class="callout callout-danger">
-              <h4>Warning!</h4>
-
-              <p>The construction of this layout differs from the normal one. In other words, the HTML markup of the navbar
-              and the content will slightly differ than that of the normal layout.</p>
-            </div>
+            <?php
+            //Check if the page has forms. If yes it includes form checker.
+            if (!empty($pageMetaData["formCheck"])) {
+              include "functions".DIRECTORY_SEPARATOR.$pageMetaData["formCheck"];
+            }
+            ?>
             <!-- Login Form Starts Here -->
             <div class="box box-info">
               <div class="box-header with-border">
                 <h3 class="box-title">Register Form</h3>
               </div>
-              <form class="form-horizontal">
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-horizontal">
                 <div class="box-body">
                   <div class="form-group">
                     <label for="inputFirstName" class="col-sm-2 control-label">First Name</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputFirstName" placeholder="Type your first name here">
+                      <input type="text" name="firstName" value="<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { echo $_POST["firstName"]; }?>" class="form-control" id="inputFirstName" placeholder="Type your first name here">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputLastName" class="col-sm-2 control-label">Last Name</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputLastName" placeholder="Type your last name here">
+                      <input type="text" name="lastName" value="<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { echo $_POST["lastName"]; } ?>" class="form-control" id="inputLastName" placeholder="Type your last name here">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputUsername" class="col-sm-2 control-label">Username</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputUsername" placeholder="Type a username here">
+                      <input type="text" name="username" value="<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { echo $_POST["username"]; } ?>" class="form-control" id="inputUsername" placeholder="Type a username here">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputEmail" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail" placeholder="Type your email here">
+                      <input type="email" name="email" value="<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { echo $_POST["email"]; } ?>" class="form-control" id="inputEmail" placeholder="Type your email here">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-sm-2 control-label">Password</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Type the password you want to login with here">
+                      <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Type the password you want to login with here">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPasswordConfirm" class="col-sm-2 control-label">Confirm Password</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPasswordConfirm" placeholder="Type the password again here">
+                      <input type="password" name="confirmPassword" class="form-control" id="inputPasswordConfirm" placeholder="Type the password again here">
                     </div>
                   </div>
                 </div>

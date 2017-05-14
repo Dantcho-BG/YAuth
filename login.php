@@ -1,6 +1,6 @@
 <?php
 
-  require "classes".DIRECTORY_SEPARATOR."includer".DIRECTORY_SEPARATOR."includer.php";
+  require "includer".DIRECTORY_SEPARATOR."includer.php";
 
   $pageID = 3;
   $pageComposer = new pageComposer($pageID);

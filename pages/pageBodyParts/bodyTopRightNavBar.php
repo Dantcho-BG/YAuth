@@ -2,7 +2,16 @@
             <div class="navbar-custom-menu">
               <ul class="nav navbar-nav">
                 <!-- User Account Menu -->
-                <li class="user user-menu">
+                <?php
+
+                  if ($pageMetaData["navBarActiveItem"] == "login") {
+                    echo '<li class="active user user-menu">';
+                  }
+                  else {
+                    echo '<li class="user user-menu">';
+                  }
+
+                ?>
                   <!-- Menu Toggle Button -->
                   <a href="login.php">
                     <!-- The user image in the navbar-->
@@ -11,7 +20,16 @@
                     <span class="hidden-xs">Login</span>
                   </a>
                 </li>
-                <li class="user user-menu">
+                <?php
+
+                  if ($pageMetaData["navBarActiveItem"] == "register") {
+                    echo '<li class="active user user-menu">';
+                  }
+                  else {
+                    echo '<li class="user user-menu">';
+                  }
+
+                ?>
                   <!-- Menu Toggle Button -->
                   <a href="register.php">
                     <!-- The user image in the navbar-->
