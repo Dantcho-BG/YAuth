@@ -46,7 +46,7 @@ class pageComposer {
       case '4':
         $pageMetaData["pageTitle"] = "Register";
         $pageMetaData["pageCSSLink"] = "";
-        $pageMetaData["pageJSLink"] = "";
+        $pageMetaData["pageJSLink"] = "liveFormValidation.js";
         $pageMetaData["navBarActiveItem"] = "register";
         $pageMetaData["formCheck"] = "registerFormCheck.php";
         break;

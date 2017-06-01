@@ -14,4 +14,18 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <?php
+    //This PHP code includes Javascript files
+    $a = 1;
+    $jsFiles = explode(", ", $pageMetaData["pageJSLink"]);
+    foreach ($jsFiles as $value) {
+      if ($a == count($jsFiles)) {
+        echo "<script src=\"js/".$value."\"></script>\n";
+      }
+      else {
+        echo "<script src=\"js/".$value."\"></script>\n\t";
+        $a++;
+      }
+    }
+    ?>
   </head>
