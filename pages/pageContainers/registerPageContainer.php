@@ -11,39 +11,39 @@
               <div class="box-header with-border">
                 <h3 class="box-title">Register Form</h3>
               </div>
-              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-horizontal">
+              <form name="registerForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-horizontal">
                 <div class="box-body">
-                  <div class="form-group">
+                  <div id="divInputFirstName" class="form-group">
                     <label for="inputFirstName" class="col-sm-2 control-label">First Name</label>
                     <div class="col-sm-10">
                       <input type="text" name="firstName" value="<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { echo $_POST["firstName"]; }?>" class="form-control" id="inputFirstName" placeholder="Type your first name here">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div id="divInputLastName" class="form-group">
                     <label for="inputLastName" class="col-sm-2 control-label">Last Name</label>
                     <div class="col-sm-10">
                       <input type="text" name="lastName" value="<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { echo $_POST["lastName"]; } ?>" class="form-control" id="inputLastName" placeholder="Type your last name here">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div id="divInputUsername" class="form-group">
                     <label for="inputUsername" class="col-sm-2 control-label">Username</label>
                     <div class="col-sm-10">
                       <input type="text" name="username" value="<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { echo $_POST["username"]; } ?>" class="form-control" id="inputUsername" placeholder="Type a username here">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div id="divInputEmail" class="form-group">
                     <label for="inputEmail" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-10">
                       <input type="email" name="email" value="<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { echo $_POST["email"]; } ?>" class="form-control" id="inputEmail" placeholder="Type your email here">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div id="divInputPassword" class="form-group">
                     <label for="inputPassword" class="col-sm-2 control-label">Password</label>
                     <div class="col-sm-10">
                       <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Type the password you want to login with here">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div id="divInputPasswordConfirm" class="form-group">
                     <label for="inputPasswordConfirm" class="col-sm-2 control-label">Confirm Password</label>
                     <div class="col-sm-10">
                       <input type="password" name="confirmPassword" class="form-control" id="inputPasswordConfirm" placeholder="Type the password again here">
