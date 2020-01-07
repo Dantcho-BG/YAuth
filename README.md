@@ -19,4 +19,6 @@ The project was supposed to have a basic authentication system with:
   - Forgot password page
   - Reset password page
   
-Currently the project has almost 0% of these done, but as I said there is no point for me to work on it anymore. 
+### Built With
+
+* [AdminLTE](https://adminlte.io/themes/AdminLTE/index2.html) - The theme used
