@@ -1,6 +1,6 @@
  # YAuth
 
-I started this project only for training and since I'm working on other projects this one is pointless.
+I started this project to train myself. It never got finished.
 
 The project was supposed to have a basic authentication system with:
 - Control Panel
